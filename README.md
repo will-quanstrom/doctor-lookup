@@ -15,12 +15,6 @@ _This webpage takes in user input and then queries an API to find local doctors 
 * _Open webpage in browser_
 * _Enter search_
 
-_Specifications
-User will search a medical condition and receive a list of specialists
-User will search a name and receive a list of doctors matching the name
-The list will include all doctor's first names, last names, address, phone number, website, and whether doctor is accepting new patients
-User will search resulting in 0 API matches and webpage will tell them there are no matches
-API query will not work and error will display _
 | Specifications                                                               | Input Example       | Output Example                                                                                          |
 |------------------------------------------------------------------------------|:--------------------|:--------------------------------------------------------------------------------------------------------|
 | Search medical condition, receive list of specialists                        | 'Sore throat'       | "Anderson, Sarah, 1212 Evergreen Lane, 206-444-4444, sarahanderson.com, currently taking new patients"  |
@@ -34,7 +28,7 @@ _{Are there issues that have not yet been resolved that you want to let users kn
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_wquanstr215@gmail.com_
 
 ## Technologies Used
 

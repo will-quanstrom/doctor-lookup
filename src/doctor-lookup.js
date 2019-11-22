@@ -16,7 +16,7 @@ export class SpecialistService {
   async getDoctor(query) {
     try{
 
-      let response = await fetch(`https://api.betterdoctor.com/2016-03-01/doctors?query=${query}&location=37.773%2C-122.413%2C100&user_location=47.6062%2C-122.3321&limit=10&user_key=${process.env.API_KEY}`);
+      let response = await fetch(`https://api.betterdoctor.com/2016-03-01/doctors?query=${query}&location=47.6062%2C-122.3321%2C100&user_location=47.6062%2C-122.3321&limit=10&user_key=${process.env.API_KEY}`);
       let jsonifiedResponse = await response.json();
       return jsonifiedResponse;
       console.log(jsonifiedResponse);

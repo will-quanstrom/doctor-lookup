@@ -34,6 +34,22 @@ $(document).ready(function() {
 
     function getElements(response) {
       console.log(response);
+      let newPatients;
+      let website;
+      for(let i = 0; i < response.data.length; i++) {
+        if(response.data[i].practices.accepts_new_patients){
+          newPatients = 'do';
+        } else{
+          newPatients =  'do not';
+        }
+
+        if(response.data[i].practices[0].website == undefined){
+          website = 'They do not have a website on record.';
+        } else {
+          website = `Their website can be found at ${response.data[i].practices[0].website}.`;
+        }
+      $('#specialistList').append(`<li>${response.data[i].profile.first_name} ${response.data[i].profile.last_name}. Their address is ${response.data[i].practices[0].visit_address.street} in ${response.data[i].practices[0].visit_address.city}. They ${newPatients} accept new patients and more information about their practice can be found at their website at ${website}  </li>`)
+      }
     }
   });
 });

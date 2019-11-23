@@ -13,6 +13,9 @@ $(document).ready(function() {
         let doctorService = new DoctorService();
         const response = await doctorService.getDoctor(inputName);
         getElements(response);
+          if(response.data.length == 0) {
+            alert('Sorry there were no matches for you search within 100 miles of Seattle.')
+          }
     })();
 
     function getElements(response) {
@@ -30,10 +33,13 @@ $(document).ready(function() {
       let specialistService = new SpecialistService;
       const response = await specialistService.getDoctor(query);
       getElements(response);
+        if(response.data.length == 0) {
+          alert('Sorry there were no matches for you search within 100 miles of Seattle.')
+        }
     })();
 
     function getElements(response) {
-      console.log(response);
+
       let newPatients;
       let website;
       for(let i = 0; i < response.data.length; i++) {
@@ -48,7 +54,7 @@ $(document).ready(function() {
         } else {
           website = `Their website can be found at ${response.data[i].practices[0].website}.`;
         }
-      $('#specialistList').append(`<li>${response.data[i].profile.first_name} ${response.data[i].profile.last_name}. Their address is ${response.data[i].practices[0].visit_address.street} in ${response.data[i].practices[0].visit_address.city}. They ${newPatients} accept new patients and more information about their practice can be found at their website at ${website}  </li>`)
+      $('#specialistList').append(`<li>${response.data[i].profile.first_name} ${response.data[i].profile.last_name}. Their address is ${response.data[i].practices[0].visit_address.street} in ${response.data[i].practices[0].visit_address.city}. They ${newPatients} accept new patients and ${website}  </li>`)
       }
     }
   });

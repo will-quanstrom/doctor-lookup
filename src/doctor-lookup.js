@@ -7,7 +7,7 @@ export class DoctorService {
       let jsonifiedResponse =  await response.json();
       return jsonifiedResponse;
     } catch(error) {
-      console.error('Sorry it didnt work ' + error.message);
+      alert("Sorry, your search didn't work: " + error.message);
     }
   }
 }
@@ -21,7 +21,7 @@ export class SpecialistService {
       return jsonifiedResponse;
       console.log(jsonifiedResponse);
     } catch(error) {
-      console.error('Sorry it didnt work' + error.message);
+      alert("Sorry, you search didn't work: " + error.message);
     }
   }
 }

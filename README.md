@@ -12,6 +12,8 @@ _This webpage takes in user input and then queries an API to find local doctors 
 
 * _Clone from Github_
 * _Install NPM modules_
+*_Visit BetterDoctor API and sign up for a free API KEY_
+*_Place API KEY in a .env file in your .gitignore file. Then download npm dotenv_
 * _Open webpage in browser_
 * _Enter search_
 
@@ -24,7 +26,7 @@ _This webpage takes in user input and then queries an API to find local doctors 
 | User told if no doctor matches search                                        | 'ajdlsj;fsdf'       | "Sorry, there are no local doctors that fit your needs"                                                 |
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_There are no known bugs at this time_
 
 ## Support and contact details
 
@@ -34,8 +36,5 @@ _wquanstr215@gmail.com_
 
 _jQuery, JavaScript, and BetterDoctor API_
 
-### License
-
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
 
 Copyright (c) 2019 **_Will Quanstrom, thanks to BetterDoctor API_**
